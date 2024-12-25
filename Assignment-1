@@ -1,0 +1,430 @@
+1. Write a C program to find the sum and average of three numbers.
+
+#include <stdio.h>
+
+int main()
+{
+int a,b,c,sum;
+float avg;
+printf("enter the three numbers: ");
+scanf("%d %d %d", &a, &b, &c);
+sum= a+b+c;
+
+avg= sum/3.0;
+printf("Sum of three numbers = %d\n", sum);
+printf("Average of three numbers = %.2f\n", avg);
+return 0;
+}
+
+
+2. Write a C program to find the sum of individual digits of a given positive
+integer.
+
+#include <stdio.h>
+
+int main()
+{
+int n,sum=0,d;
+printf("enter a positive integer: ");
+scanf("%d", &n);
+while(n>0)
+{
+d=n%10;
+sum=sum+d;
+n=n/10;
+}
+printf("Sum of digits = %d\n", sum);
+return 0;
+}
+
+
+3. Write a C program to generate the first n terms of the Fibonacci sequence.
+
+#include <stdio.h>
+
+int main()
+{
+int n,a=0,b=1,next,i;
+printf("enter the number of terms: ");
+scanf("%d", &n);
+printf("Fibonacci sequence: ");
+
+for(i=1;i<=n;i++)
+{
+printf("%d", a);
+next= a+b;
+a=b;
+b=next;
+}
+printf("\n");
+return 0;
+}
+
+
+4. Write a C program to generate prime numbers between 1 to n.
+
+#include <stdio.h>
+
+int main()
+{
+int n,i,j,isPrime;
+printf("enter the value of n: ");
+scanf("%d", &n);
+printf("Prime numbers between 1 and %d: ", n);
+for(i=2;i<=n;i++)
+{
+isPrime=1;
+for(j=2;j*j<=i;j++)
+{
+if(i%j==0)
+{
+isPrime=0;
+break;
+}
+}
+
+if(isPrime)
+printf("%d", i);
+}
+printf("\n");
+return 0;
+}
+
+
+5. Write a C program to check whether a given number is an Armstrong number
+or not.
+
+#include <stdio.h>
+
+int main()
+{
+int n, original,r,sum=0;
+printf("enter a number: ");
+scanf("%d", &n);
+original=n;
+while(n>0)
+{
+r=n%10;
+sum=sum+r*r*r;
+n=n/10;
+}
+if(sum==original)
+printf("%d is an armstrong number.\n", original);
+else
+printf("%d is not an armstrong number.\n", original);
+
+return 0;
+}
+
+
+6. Write a C program to evaluate the algebraic expression (ax+b)/(ax-b).
+
+#include <stdio.h>
+
+int main()
+{
+int a,x,b;
+float r;
+
+printf("enter the values of a, x, and b: ");
+scanf("%d %d %d", &a, &x, &b);
+if(a*x-b!=0)
+{
+r= (float)(a*x+b)/(a*x-b);
+printf("Result= %.2f\n", r);
+}
+else
+{
+printf("Division by zero not allowed.\n");
+}
+return 0;
+}
+
+
+7. Write a C program to check if the given number is a perfect number.
+
+#include <stdio.h>
+
+int main()
+{
+int n,i,sum=0;
+printf("enter a number: ");
+scanf("%d", &n);
+for(i=1;i<n;i++)
+{
+if(n%i==0)
+
+sum=sum+i;
+}
+if(sum==n)
+printf("%d is a perfect number.\n", n);
+else
+printf("%d is not a perfect number.\n", n);
+return 0;
+}
+
+
+8. Write a C program to check if a given number is a strong number.
+
+#include <stdio.h>
+
+int main()
+{
+int n, i, original, d, fact, sum=0;
+printf("enter a number: ");
+scanf("%d", &n);
+original=n;
+while(n>0)
+{
+d=n%10;
+fact=1;
+for(i=1;i<=d;i++)
+{
+fact=fact*i;
+}
+sum=sum+fact;
+n=n/10;
+}
+
+if(sum==original)
+printf("%d is a strong number.\n", original);
+else
+printf("%d is not a strong number.\n", original);
+return 0;
+}
+
+
+9. Write a program to print your name without using any semicolons in the
+program.
+
+#include <stdio.h>
+
+int main()
+{
+if(printf("Shashwat Khaitan\n")){}
+return 0;
+}
+
+
+10.Write a program to convert temperatures in Celsius to Fahrenheit and vice-
+versa.
+
+#include <stdio.h>
+int main()
+{
+float c,f;
+printf("enter temperature in celsius:");
+scanf("%f", &c);
+f= (c* 9/5) + 32;
+printf("%.2f degree celsius is equal to %.2f degree fahrenheit. \n", c,f);
+
+return 0;
+}
+
+
+11.Write a C program to check whether a number is a palindrome or not.
+
+#include <stdio.h>
+
+int main()
+{
+int n,rev=0, original, d;
+printf("enter a number: ");
+scanf("%d", &n);
+original=n;
+while(n>0)
+{
+
+d=n%10;
+rev=rev*10+d;
+n=n/10;
+}
+if(rev==original)
+printf("%d is a palindrome number.\n", original);
+else
+printf("%d is not a palindrome number.\n", original);
+return 0;
+}
+
+
+12.Write a C program to find the maximum between two numbers.
+
+#include <stdio.h>
+
+int main()
+{
+int a,b;
+printf("enter the two numbers: ");
+scanf("%d %d", &a, &b);
+if(a>b)
+printf("Maximum number = %d\n", a);
+else
+printf("Maximum number = %d\n", b);
+return 0;
+}
+
+
+13.Write a C program to find the maximum between three numbers.
+
+#include <stdio.h>
+
+int main()
+{
+int a,b,c,max;
+printf("enter the three numbers: ");
+scanf("%d %d %d", &a, &b, &c);
+max=a;
+if(b>max)
+max=b;
+
+if(c>max)
+max=c;
+printf("Maximum number = %d\n", max);
+return 0;
+}
+
+
+14.Write a C program to check whether a number is negative, positive, or zero.
+
+#include <stdio.h>
+
+int main()
+{
+int n;
+printf("enter a number: ");
+scanf("%d", &n);
+if(n>0)
+printf("%d is a positive number.\n", n);
+else if(n<0)
+printf("%d is a negative number.\n", n);
+else
+printf("The number is zero.\n");
+return 0;
+}
+
+
+15.Write a C program to check whether a number is divisible by 5 and 11 or not
+within the range of 100 to 500.
+
+#include <stdio.h>
+
+int main()
+{
+int n;
+printf("enter a number (100-500): ");
+scanf("%d", &n);
+if(n>=100 && n<=500)
+{
+
+if(n%5==0 && n%11==0)
+printf("%d is divisible by 5 and 11.\n", n);
+else
+printf("%d is not divisible by 5 and 11.\n", n);
+}
+else
+{
+printf("Number out of range (100-500).\n");
+}
+return 0;
+}
+
+
+16.Write a C program to check whether a number is even or odd.
+
+#include <stdio.h>
+
+int main()
+{
+int n;
+printf("enter a number: ");
+scanf("%d", &n);
+if(n%2==0)
+printf("%d is an even numbr.\n", n);
+else
+printf("%d is an odd number.\n", n);
+return 0;
+}
+
+
+17.Write a C program to check whether a year is a leap year or not.
+
+#include <stdio.h>
+
+int main()
+{
+int y;
+printf("enter the year: ");
+scanf("%d", &y);
+if((y%4==0 && y%100!=0) || (y%400==0))
+printf("%d is a leap year.\n", y);
+else
+
+printf("%d is not a leap year.\n", y);
+return 0;
+}
+
+
+18.Write a C program to check whether a character is alphabet or not.
+
+#include <stdio.h>
+
+int main()
+{
+char chr;
+
+printf("enter a character: ");
+scanf("%c", &chr);
+if((chr>= 'A' && chr<= 'Z') || (chr>= 'a' && chr<= 'z'))
+printf("%c is an alphabet.\n", chr);
+else
+printf("%c is not an alphabet.\n", chr);
+return 0;
+}
+
+
+19.Write a C program to input any alphabet and check whether it is a vowel or
+consonant.
+
+#include <stdio.h>
+
+int main()
+{
+char ch;
+printf("enter an alphabet: ");
+scanf("%c", &ch);
+if((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z'))
+{
+if(ch== 'A' || ch== 'E' || ch== 'I' || ch== 'O' || ch== 'U' || ch== 'a' || ch==
+'e' || ch== 'i' || ch== 'o' || ch== 'u')
+printf("%c is a vowel.\n", ch);
+else
+printf("%c is a consonant.\n", ch);
+}
+else
+{
+printf("%c is not an alphabet.\n", ch);
+}
+
+return 0;
+}
+
+
+20.Write a C program to input any character and check whether it is an alphabet,
+digit, or special character.
+
+#include <stdio.h>
+
+int main()
+{
+char c;
+printf("enter a character: ");
+
+scanf("%c", &c);
+if((c >= 'A' && c <= 'Z') || (c>= 'a' && c <= 'z'))
+printf("%c is an alphabet.\n", c);
+else if(c >= '0' && c <= '9')
+printf("%c is a digit.\n", c);
+else
+printf("%c is a special character.\n", c);
+return 0;
+}
