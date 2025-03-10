@@ -19,18 +19,18 @@ return 0;
 #include <stdio.h> 
 int main() 
 { 
-} 
 int n,sum=0,d; 
 printf("enter a positive integer: "); 
 scanf("%d", &n); 
 while(n>0) 
 { 
-} 
 d=n%10; 
 sum=sum+d; 
-n=n/10; 
+n=n/10;
+}
 printf("Sum of digits = %d\n", sum); 
 return 0;
+}
 
 3. Write a C program to generate the first n terms of the Fibonacci sequence. 
 
@@ -91,10 +91,10 @@ scanf("%d", &n);
 original=n; 
 while(n>0) 
 { 
-} 
 r=n%10; 
 sum=sum+r*r*r; 
-n=n/10; 
+n=n/10;
+}
 if(sum==original) 
 printf("%d is an armstrong number.\n", original); 
 else 
@@ -113,13 +113,13 @@ printf("enter the values of a, x, and b: ");
 scanf("%d %d %d", &a, &x, &b); 
 if(a*x-b!=0) 
 { 
-} 
-else 
-{ 
-} 
 r= (float)(a*x+b)/(a*x-b); 
 printf("Result= %.2f\n", r); 
-printf("Division by zero not allowed.\n"); 
+}
+else 
+{ 
+printf("Division by zero not allowed.\n");
+}
 return 0; 
 }
 
@@ -176,8 +176,8 @@ return 0;
 #include <stdio.h> 
 int main() 
 { 
-} 
 if(printf("Shashwat Khaitan\n")){} 
+}
 return 0;
 
 10. Write a program to convert temperatures in Celsius to Fahrenheit and vice versa. 
@@ -185,13 +185,13 @@ return 0;
 #include <stdio.h> 
 int main() 
 { 
-} 
 float c,f; 
 printf("enter temperature in celsius:"); 
 scanf("%f", &c); 
 f= (c* 9/5) + 32; 
 printf("%.2f degree celsius is equal to %.2f degree fahrenheit. \n", c,f); 
-return 0; 
+return 0;
+}
 
 11. Write a C program to check whether a number is a palindrome or not.  
 
@@ -220,7 +220,6 @@ return 0;
 #include <stdio.h> 
 int main() 
 { 
-} 
 int a,b; 
 printf("enter the two numbers: "); 
 scanf("%d %d", &a, &b); 
@@ -229,6 +228,7 @@ printf("Maximum number = %d\n", a);
 else 
 printf("Maximum number = %d\n", b); 
 return 0; 
+}
 
 13. Write a C program to find the maximum between three numbers. 
 
@@ -252,7 +252,6 @@ return 0;
 #include <stdio.h> 
 int main() 
 { 
-} 
 int n; 
 printf("enter a number: "); 
 scanf("%d", &n); 
@@ -263,6 +262,7 @@ printf("%d is a negative number.\n", n);
 else 
 printf("The number is zero.\n"); 
 return 0;
+}
 
 15. Write a C program to check whether a number is divisible by 5 and 11 or not within the range of 100 to 500. 
 
